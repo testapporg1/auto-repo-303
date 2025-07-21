@@ -1,22 +1,12 @@
 name: Black Duck Security Scan
-"on":
+on:
   push:
-    branches:
-      - main
-      - master
-      - develop
-      - stage
-      - release
+    branches: [main,master,develop,stage,release]
   pull_request:
-    branches:
-      - main
-      - master
-      - develop
-      - stage
-      - release
+    branches: [main,master,develop,stage,release]
   workflow_dispatch: {}
 jobs:
-  scan:
+  blackducksca:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Source
